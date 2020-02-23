@@ -1,0 +1,8 @@
+[package]
+name = "sbus"
+version = "0.1.0"
+authors = ["Ze'ev Klapow <zklapow@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+arraydeque = { version = "~0.4", default-features = false }
