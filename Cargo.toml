@@ -2,6 +2,11 @@
 name = "sbus"
 version = "0.1.0"
 authors = ["Ze'ev Klapow <zklapow@gmail.com>"]
+repository = "https://github.com/zklapow/sbus"
+categories = ["embedded", "no-std", "parser-implementations", "science::robotics"]
+license = "Apache-2.0"
+maintenance = { status = "actively-developed" }
+description = "A simple parser for the S.Bus RC protocol"
 edition = "2018"
 
 [dependencies]
