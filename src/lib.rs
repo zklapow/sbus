@@ -1,5 +1,9 @@
 #![no_std]
 
+mod taranis;
+
+pub use taranis::TaranisX7SBusPacket;
+
 use arraydeque::{ArrayDeque, Wrapping};
 
 // The flag by should start with 4 0s
