@@ -1,5 +1,4 @@
 use crate::SBusPacket;
-use core::ptr::read;
 
 const X7_MIN: u16 = 172;
 const X7_MAX: u16 = 1811;
