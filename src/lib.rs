@@ -116,11 +116,6 @@ impl SBusPacketParser {
             while self.buffer.len() > 0 && *self.buffer.get(0).unwrap() != SBUS_HEADER_BYTE {
                 self.buffer.pop_front();
             }
-
-            //            if self.buffer.len() >= SBUS_PACKET_SIZE {
-            //                // We seem to still have enough bytes for a packet! try this again...
-            //                return self.try_parse();
-            //            }
         }
 
         return None;

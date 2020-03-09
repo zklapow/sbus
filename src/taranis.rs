@@ -6,7 +6,7 @@ const X7_RANGE: f32 = (X7_MAX - X7_MIN) as f32;
 
 #[derive(Debug, Copy, Clone)]
 pub struct TaranisX7SBusPacket {
-    channels: [f32; 16],
+    pub channels: [f32; 16],
     failsafe: bool,
     frame_lost: bool,
 }
