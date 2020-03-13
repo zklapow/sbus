@@ -1,6 +1,6 @@
 [package]
 name = "sbus"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Ze'ev Klapow <zklapow@gmail.com>"]
 repository = "https://github.com/zklapow/sbus"
 categories = ["embedded", "no-std", "parser-implementations", "science::robotics"]
