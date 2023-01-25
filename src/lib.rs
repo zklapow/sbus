@@ -1,9 +1,5 @@
 #![no_std]
 
-mod taranis;
-
-pub use taranis::TaranisX7SBusPacket;
-
 use arraydeque::{ArrayDeque, Wrapping};
 
 // The flag by should start with 4 0s
@@ -15,11 +11,11 @@ const SBUS_PACKET_SIZE: usize = 25;
 
 #[derive(Debug, Ord, PartialOrd, Eq, PartialEq, Copy, Clone)]
 pub struct SBusPacket {
-    channels: [u16; 16],
-    d1: bool,
-    d2: bool,
-    failsafe: bool,
-    frame_lost: bool,
+    pub channels: [u16; 16],
+    pub d1: bool,
+    pub d2: bool,
+    pub failsafe: bool,
+    pub frame_lost: bool,
 }
 
 pub struct SBusPacketParser {
