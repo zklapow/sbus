@@ -119,5 +119,5 @@ impl SBusPacketParser {
 }
 
 fn is_flag_set(flag_byte: u8, idx: u8) -> bool {
-    flag_byte & 1 << idx == 1
+    ( flag_byte >> idx ) & 1 == 1
 }
