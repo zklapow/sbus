@@ -2,6 +2,9 @@
 
 use arraydeque::{ArrayDeque, Wrapping};
 
+#[cfg(feature = "embedded-hal")]
+use embedded_hal::serial::Read;
+
 // The flag by should start with 4 0s
 const SBUS_FLAG_BYTE_MASK: u8 = 0b11110000;
 const SBUS_HEADER_BYTE: u8 = 0x0F;
@@ -33,6 +36,13 @@ impl SBusPacketParser {
         bytes.iter().for_each(|b| {
             self.buffer.push_back(*b);
         })
+    }
+
+    #[cfg(feature = "embedded-hal")]
+    pub fn read_serial<U : Read<u8>>(&mut self, uart : & mut U) {
+        while let Ok(word) = uart.read() {
+            self.push_bytes(&[word])
+        }
     }
 
     pub fn try_parse(&mut self) -> Option<SBusPacket> {

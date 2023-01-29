@@ -11,3 +11,7 @@ edition = "2018"
 
 [dependencies]
 arraydeque = { version = "~0.4", default-features = false }
+embedded-hal = { version = "0.2.7" , optional = true }
+
+[features]
+embedded-hal = ["dep:embedded-hal"]
