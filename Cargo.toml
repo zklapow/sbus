@@ -1,17 +1,17 @@
 [package]
 name = "sbus"
-version = "0.2.2"
-authors = ["Ze'ev Klapow <zklapow@gmail.com>"]
-repository = "https://github.com/zklapow/sbus"
-categories = ["embedded", "no-std", "parser-implementations", "science::robotics"]
+version = "0.3.0"
+authors = ["Peter Krull"]
+repository = "https://github.com/peterkrull/sbus"
+categories = ["embedded-hal", "embedded", "no-std", "parser-implementations", "science::robotics"]
 license = "Apache-2.0"
 maintenance = { status = "actively-developed" }
-description = "A simple parser for the S.Bus RC protocol"
-edition = "2018"
+description = "A simple parser for the S.Bus RC protocol, with optional embedded-hal UART support"
+edition = "2021"
 
 [dependencies]
 arraydeque = { version = "~0.4", default-features = false }
-embedded-hal = { version = "0.2.7" , optional = true }
+embedded-hal = { version = "*" , optional = true }
 
 [features]
 embedded-hal = ["dep:embedded-hal"]
