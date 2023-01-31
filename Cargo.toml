@@ -11,15 +11,15 @@ edition = "2021"
 
 [dependencies]
 arraydeque = { version = "~0.4", default-features = false }
-bitvec = { version = "1.0.1", default-features = false }
-embedded-hal = { version = "*" , optional = true }
+bitvec = { version = "~1.0", default-features = false }
+embedded-hal = { version = "~0.2" , optional = true }
 
 [features]
 embedded-hal = ["dep:embedded-hal"]
 
 [dev-dependencies]
-hex-literal = "*"
-criterion = "0.4.0"
+hex-literal = "~0.3"
+criterion = "~0.4"
 
 [[bench]]
 name = "benchmarks"
