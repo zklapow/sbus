@@ -1,8 +1,8 @@
 [package]
 name = "sbus"
 version = "0.3.0"
-authors = ["Peter Krull"]
-repository = "https://github.com/peterkrull/sbus"
+authors = ["Ze'ev Klapow <zklapow@gmail.com", "Peter Krull"]
+repository = "https://github.com/zklapow/sbus"
 categories = ["embedded-hal", "embedded", "no-std", "parser-implementations", "science::robotics"]
 license = "Apache-2.0"
 maintenance = { status = "actively-developed" }
